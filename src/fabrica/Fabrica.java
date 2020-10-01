@@ -5,11 +5,11 @@ import java.util.Date;
 //Este es un nuevo comentario
 public class Fabrica {
 
-    private String nombre;
-    private int numeroDeTrabajadores;
-    private Date fechaDeFundacion;
-    private String especialidad;
-    private Boolean internacional;
+    private String nombre; //Este es el nombre de la fábrica
+    private int numeroDeTrabajadores; //Son los trabajadores contratados
+    private Date fechaDeFundacion;// La fecha en que se fundó la fábrica
+    private String especialidad;// Es en lo que mejor se desempeña la fábrica
+    private Boolean internacional;// Denota si la fábrica hace exportaciones o no 
 
     public Fabrica(
             String nombre,
