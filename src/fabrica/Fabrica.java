@@ -11,6 +11,7 @@ public class Fabrica {
     private String especialidad;// Es en lo que mejor se desempeña la fábrica
     private Boolean internacional;// Denota si la fábrica hace exportaciones o no 
 
+    //Este es el constructor de clase
     public Fabrica(
             String nombre,
             int numeroDeTrabajadores,
@@ -44,6 +45,7 @@ public class Fabrica {
         this.numeroDeTrabajadores += 1;
     }
 
+    //A partir de esta línea se encuentran los métodos get y set
     public String getNombre() {
         return nombre;
     }
