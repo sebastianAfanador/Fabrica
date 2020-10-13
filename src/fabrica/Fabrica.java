@@ -11,6 +11,10 @@ public class Fabrica {
     private String especialidad;// Es en lo que mejor se desempeña la fábrica
     private Boolean internacional;// Denota si la fábrica hace exportaciones o no 
 
+    //atributos de composición
+    private Persona propietario = null;
+    private Maquina maquinaMagica;
+
     //Este es el constructor de clase
     public Fabrica(
             String nombre,
@@ -23,6 +27,15 @@ public class Fabrica {
         this.fechaDeFundacion = fechaDeFundacion;
         this.especialidad = especialidad;
         this.internacional = internacional;
+        this.maquinaMagica = new Maquina(1000,"Sin registro");
+    }
+
+    public Persona getPropietario(){
+        return this.propietario;
+    }
+
+    public void setPropietario(Persona p){
+        this.propietario = p;
     }
 
     /**
