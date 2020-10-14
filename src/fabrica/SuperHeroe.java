@@ -11,5 +11,22 @@ public class SuperHeroe extends Persona{
         this.viveAun = viveAun;
     }
 
+    public String getSuperPoder() {
+        return superPoder;
+    }
+
+    public void setSuperPoder(String superPoder) {
+        this.superPoder = superPoder;
+    }
+
+    public Boolean getViveAun() {
+        return viveAun;
+    }
+
+    public void setViveAun(Boolean viveAun) {
+        this.viveAun = viveAun;
+    }
+
+    
     
 }

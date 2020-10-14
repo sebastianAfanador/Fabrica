@@ -27,9 +27,13 @@ public class Fabrica {
         this.fechaDeFundacion = fechaDeFundacion;
         this.especialidad = especialidad;
         this.internacional = internacional;
-        this.maquinaMagica = new Maquina(1000,"Sin registro");
+        this.maquinaMagica = new Maquina(1000,"Wonka");
     }
 
+    public Maquina getMaquinaMagica(){
+        return this.maquinaMagica;
+    }
+    
     public Persona getPropietario(){
         return this.propietario;
     }
@@ -100,27 +104,32 @@ public class Fabrica {
     }
 
     public static void main(String[] args) {
-        Fabrica fabricaUno = new Fabrica(
-                "Colombia Maderas",
-                150,
-                new Date(),
-                "enchapados de madera",
-                false);
-        Fabrica fabricaDos = new Fabrica(
-                "Ropaimas",
-                15,
-                new Date(),
-                "Ropa y accesorios",
+        
+        Fabrica fabricaDeMaderas = new Fabrica(
+                "MaderasPlus", 
+                15, 
+                new Date(), 
+                "Enchapados", 
                 true);
         
-        System.out.println(fabricaUno.getNombre());
-        System.out.println(fabricaUno.getNumeroDeTrabajadores());
-        System.out.println(fabricaUno.getInternacional());
         
-        fabricaUno.ampliarPlanta();
         
-        System.out.println(fabricaUno.getNombre());
-        System.out.println(fabricaUno.getNumeroDeTrabajadores());
-        System.out.println(fabricaUno.getInternacional());
+        SuperHeroe ironMan = new SuperHeroe(
+                "Tony",
+                "Stark",
+                "Programación",
+                false);
+       
+        
+        
+        
+        fabricaDeMaderas.setPropietario(ironMan);
+        
+        System.out.println("Nombre del propietario");
+        System.out.println(fabricaDeMaderas.getPropietario().getNombre());
+        
+        
+        System.out.println(fabricaDeMaderas.getMaquinaMagica().getMarca());
     }
+        
 }
